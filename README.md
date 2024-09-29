@@ -11,15 +11,18 @@
 
 #### lsp configs:
 
-##### lua
-##### typescript:
+<b>lua</b>
+
+<b>typescript:</b>
+
 npm install -g typescript typescript-language-server
 
 npm i -g @vue/typescript-plugin
 
 注意配置@vue/typescript-plugin的路径
 
-##### vue:
+<b>vue:</b>
 npm install -g @vue/language-server
-##### html && css:
+
+<b>html && css:</b>
 npm i -g vscode-langservers-extracted
