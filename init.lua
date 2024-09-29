@@ -51,9 +51,7 @@ require("mason").setup({ --使用mason插件
 })
 
 require("mason-lspconfig").setup { --配置需要安装的lsp
-	ensure_installed = {
-		'lua_ls',
-	}
+
 }
 
 local cmp = require('cmp') --使用cmp插件（代码补全）
@@ -78,10 +76,6 @@ cmp.setup({
 })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities() --通过此变量 将lsp添加到nvim_lsp的列表中
-
-require("lspconfig").lua_ls.setup { --lsp lua_ls
-	capabilities = capabilities
-}
 
 require'lspconfig'.ts_ls.setup { --lsp ts_ls NEED TO INSTALL BY NPM
   init_options = {
