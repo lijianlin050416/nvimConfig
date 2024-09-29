@@ -11,8 +11,6 @@
 
 #### lsp configs:
 
-<b>lua</b>
-
 <b>typescript:</b>
 
 npm install -g typescript typescript-language-server
