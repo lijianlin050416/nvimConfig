@@ -1,6 +1,6 @@
 # nvimConfig
 
-自用nvim配置
+nvim配置
 <ul>
   <li>自动补全括号</li>
   <li>代码补全</li>
