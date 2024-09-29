@@ -50,9 +50,7 @@ require("mason").setup({ --使用mason插件
     }
 })
 
-require("mason-lspconfig").setup { --配置需要安装的lsp
-
-}
+require("mason-lspconfig").setup()
 
 local cmp = require('cmp') --使用cmp插件（代码补全）
 
