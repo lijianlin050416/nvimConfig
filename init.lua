@@ -91,7 +91,8 @@ require'lspconfig'.ts_ls.setup { --lsp ts_ls NEED TO INSTALL BY NPM
 		"javascript.jsx",
 		"typescript",
 		"typescriptreact",
-		"typescript.tsx"
+		"typescript.tsx",
+		"vue"
 	},
 	single_file_support = true
 }
