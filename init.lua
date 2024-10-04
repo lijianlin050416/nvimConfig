@@ -41,13 +41,13 @@ require('nightfox').setup({ --设置nvim的配色主题
 })
 
 require("mason").setup({ --使用mason插件
-    ui = {
-        icons = {
-            package_installed = "✓",
-            package_pending = "➜",
-            package_uninstalled = "✗"
-        }
+  ui = {
+    icons = {
+      package_installed = "✓",
+      package_pending = "➜",
+      package_uninstalled = "✗"
     }
+  }
 })
 
 require("mason-lspconfig").setup()
@@ -55,22 +55,22 @@ require("mason-lspconfig").setup()
 local cmp = require('cmp') --使用cmp插件（代码补全）
 
 cmp.setup({
-    snippet = {
-      expand = function(args)
-        require('luasnip').lsp_expand(args.body) --使用luasnip作为snippet插件
-      end,
-    },
-    mapping = cmp.mapping.preset.insert({ --配置cmp的快捷键
-      ['<C-z>'] = cmp.mapping.complete(),
-      ['<C-x>'] = cmp.mapping.abort(),
-      ['<Tab>'] = cmp.mapping.confirm({ select = true }),
-    }),
-    sources = cmp.config.sources({ --配置代码补全的来源
-      { name = 'nvim_lsp' },
-			{ name = 'luasnip' }
-    }, {
-      { name = 'buffer' },
-    })
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body) --使用luasnip作为snippet插件
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({ --配置cmp的快捷键
+    ['<C-z>'] = cmp.mapping.complete(),
+    ['<C-x>'] = cmp.mapping.abort(),
+    ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+  }),
+  sources = cmp.config.sources({ --配置代码补全的来源
+    { name = 'nvim_lsp' },
+		{ name = 'luasnip' }
+  }, {
+    { name = 'buffer' },
+  })
 })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities() --通过此变量 将lsp添加到nvim_lsp的列表中
@@ -80,7 +80,7 @@ require'lspconfig'.ts_ls.setup { --lsp ts_ls NEED TO INSTALL BY NPM
     plugins = {
       {
         name = "@vue/typescript-plugin", --NEED TO INSTALL BY NPM
-        location = "/usr/lib/node_modules/@vue/typescript-plugin",
+	      location = "/home/jianlin/.nvm/versions/node/v20.18.0/lib/node_modules/@vue/typescript-plugin",
         languages = {"javascript", "typescript", "vue"},
       },
     },
